@@ -13,7 +13,7 @@ plugins:
 functions:
   salaryHandler:
     handler: api.salaryHandler
-    name: employeeBank
+    name: employeeSalary
     memorySize: 128
     timeout: 5
     events:
@@ -41,41 +41,6 @@ functions:
           - "dynamodb:Scan"
           - "dynamodb:DeleteItem"
         Resource: !GetAtt EmployeeTable.Arn
-    # events:
-    #   - http:
-    #       method: POST
-    #       path: createBankDetialsInfo
-    #       cors: true
-    #   - http:
-    #       method: PUT
-    #       path: updateBankDetialsInfo/{empId}
-    #       cors: true
-    #   - http:
-    #       method: GET
-    #       path: getEmployeeBankDetialsInfo/{empId}
-    #       cors: true
-    #   - http:
-    #       method: GET
-    #       path: getAllEmployeesBankDetialsInfo
-    #       cors: true
-    #   - http:
-    #       method: DELETE
-    #       path: deleteBankDetialsInfo/{empId}
-    #       cors: true
-    #   - http:
-    #       method: DELETE
-    #       path: softDeleteBankDetialsInfo/{empId}
-    #       cors: true
-    # iamRoleStatements:
-    #   - Effect: "Allow"
-    #     Action:
-    #       - "dynamodb:PutItem"
-    #       - "dynamodb:UpdateItem"
-    #       - "dynamodb:DeleteItem"
-    #       - "dynamodb:Scan"
-    #       - "dynamodb:GetItem"
-    #     Resource: !GetAtt EmployeeTable.Arn
-    # iamRoleStatementsName: Employee-Banks-Detail-All-api-dev-lambda
 resources:
   Resources:
     EmployeeTable:
