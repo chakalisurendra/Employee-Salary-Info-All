@@ -11,8 +11,8 @@ custom:
 plugins:
   - serverless-iam-roles-per-function
 functions:
-  salaryHandlerAll:
-    handler: api.salaryHandlerAll
+  salaryHandler:
+    handler: api.salaryHandler
     name: employeeBank
     memorySize: 128
     timeout: 5

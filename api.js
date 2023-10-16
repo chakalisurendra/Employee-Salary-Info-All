@@ -43,7 +43,7 @@ const validation = (salaryDetails) => {
   //return null; // Validation passed
 };
 // Function to create an employee
-const salaryHandlerAll = async (event) => {
+const salaryHandler = async (event) => {
   let response = { statusCode: 200 };
   const resource = event.resource;
   switch (resource) {
@@ -255,5 +255,5 @@ const salaryHandlerAll = async (event) => {
 };
 // Export the createEmployee and updateEmployee functions
 module.exports = {
-  salaryHandlerAll,
+    salaryHandler,
 };
